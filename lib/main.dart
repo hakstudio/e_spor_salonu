@@ -1,6 +1,8 @@
+import 'package:e_spor_salonu/model/login.dart';
 import 'package:e_spor_salonu/model/product.dart';
 import 'package:e_spor_salonu/model/user.dart';
 import 'package:e_spor_salonu/view/account_view.dart';
+import 'package:e_spor_salonu/view/leave_view.dart';
 import 'package:e_spor_salonu/view/login_view.dart';
 import 'package:e_spor_salonu/view/main_view.dart';
 import 'package:e_spor_salonu/view/payment_view.dart';
@@ -14,11 +16,8 @@ void main() {
 }
 
 class Main extends StatelessWidget {
-  static List<User> userList = [];
-  static User user = User();
-  static Product product = Product();
-  // static String ip = "192.168.1.127";
-  static String ip = "10.16.8.220";
+  static String server = "http://192.168.1.100:8080";
+  static Login? login;
 
   const Main({super.key});
 
@@ -34,6 +33,7 @@ class Main extends StatelessWidget {
         "/product": (context) => ProductView(),
         "/payment": (context) => PaymentView(),
         "/purchase": (context) => PurchaseView(),
+        "/leave": (context) => LeaveView(),
       },
     );
   }
@@ -91,6 +91,19 @@ class Main extends StatelessWidget {
         return "Aralık";
       default:
         return "Bilinmeyen Ay";
+    }
+  }
+
+  static String statusString(int? status){
+    switch(status){
+      case 0:
+        return "İşleme Alındı";
+      case 1:
+        return "Onaylandı";
+      case 2:
+        return "Reddedildi";
+      default:
+        return "Bilinmeyen Başvuru Durumu";
     }
   }
 }

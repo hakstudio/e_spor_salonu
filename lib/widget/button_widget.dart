@@ -2,7 +2,7 @@ import 'package:e_spor_salonu/widget/text_widget.dart';
 import 'package:flutter/material.dart';
 
 class ButtonWidget extends StatelessWidget {
-  IconData icon;
+  IconData? icon;
   String text;
   VoidCallback onPressed;
   MainAxisSize mainAxisSize;
@@ -12,6 +12,12 @@ class ButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Widget iconWidget=Icon(
+      icon,
+      size: 30
+    );
+    if(icon==null)
+      iconWidget=Container(width: 0,height: 0,);
     return Padding(
       padding: const EdgeInsets.all(4),
       child: ElevatedButton(
@@ -22,10 +28,7 @@ class ButtonWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: mainAxisSize,
             children: [
-              Icon(
-                icon,
-                size: 30,
-              ),
+              iconWidget,
               TextWidget(text, size: 20)
             ],
           ),
