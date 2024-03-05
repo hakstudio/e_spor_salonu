@@ -1,6 +1,4 @@
 import 'package:e_spor_salonu/model/login.dart';
-import 'package:e_spor_salonu/model/product.dart';
-import 'package:e_spor_salonu/model/user.dart';
 import 'package:e_spor_salonu/view/account_view.dart';
 import 'package:e_spor_salonu/view/leave_view.dart';
 import 'package:e_spor_salonu/view/login_view.dart';
@@ -16,7 +14,7 @@ void main() {
 }
 
 class Main extends StatelessWidget {
-  static String server = "http://192.168.1.100:8080";
+  static String server = "http://20.216.167.70:8080";
   static Login? login;
 
   const Main({super.key});

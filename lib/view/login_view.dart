@@ -17,7 +17,7 @@ class _LoginViewState extends State<LoginView> {
 
   @override
   Widget build(BuildContext context) {
-    usernameController.text = "69433239784";//69433239784:05413522575
+    usernameController.text = "69433239784";
     passwordController.text = "05413522575";
     return Scaffold(
       appBar: AppBar(title: Center(child: Text("Kullanıcı Girişi"))),
