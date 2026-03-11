@@ -11,6 +11,9 @@ A mobile application for managing an E-Sports Center, built with Flutter.
 - **Purchasing & Payments:** Handle purchases and payment processing.
 - **Leave Management:** Manage user leaves or exit processes.
 
+## Backend
+This application relies on a **Spring Boot** backend for its API, data, and logic processing. You can find the backend repository here: [hakstudio/esporsalonu](https://github.com/hakstudio/esporsalonu).
+
 ## Tech Stack
 - **Framework:** [Flutter](https://flutter.dev/)
 - **Language:** Dart
