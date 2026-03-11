@@ -11,6 +11,9 @@ Flutter ile geliştirilmiş bir E-Spor Salonu yönetim uygulaması.
 - **Satın Alma ve Ödeme:** Ürün satın alma ve ödeme işlemlerinin yapılması.
 - **Ayrılma ve Çıkış İşlemleri:** Uygulama içi çıkış/ayrılma süreçlerinin yönetilmesi.
 
+## Arka Uç (Backend)
+Bu uygulamanın API, veri ve iş mantığı için bir **Spring Boot** arka uç (backend) projesi kullanılmaktadır. Backend projeye buradan ulaşabilirsiniz: [hakstudio/esporsalonu](https://github.com/hakstudio/esporsalonu).
+
 ## Teknolojiler
 - **Altyapı:** [Flutter](https://flutter.dev/)
 - **Dil:** Dart
